@@ -1,0 +1,122 @@
+<app-dashboard></app-dashboard>
+<div class="container-fluid aaa">
+  <div class="card padding-10px">    
+<div class="row ddd">
+    <div class="col-md-3">
+      <div class="card min-height-350">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fas fa-chart-line"></i>
+            <div class="alert alert-info">
+              <strong>Import The Excel Sheet</strong>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <input type="file" style="display: inline-block;" (change)="incomingfile($event)" placeholder="Upload file"
+            accept=".xlsx">
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-info" (click)="Upload()">Upload</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card min-height-350">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fas fa-chart-line"></i>
+            <div class="alert alert-info">
+              <strong>Export Excel File From Table </strong>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <table >
+            <tr>
+              <td>Eid</td>
+              <td>Ename</td>
+              <td>Esal</td>
+            </tr>
+            <tr *ngFor="let item of data">
+              <td>{{item.eid}}</td>
+              <td>{{item.ename}}</td>
+              <td>{{item.esal}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="card-footer">
+          <a (click)="excelSheetDownload()" class="btn btn-primary btn-outline margin-left-10">
+            <i class="fas fa-upload"></i> Export
+          </a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card min-height-350">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fas fa-chart-line"></i>
+            <div class="alert alert-info">
+              <strong>Html To Image Conversion - Angular 6</strong>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+         html page can convert to image
+        </div>
+        <div class="card-footer">
+            <input type="button" value="DownloadImage" class="btn btn-primary btn-outline margin-left-10" (click)="captureScreen()" />
+  
+          </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fas fa-chart-line"></i>
+            <div class="alert alert-info">
+              <strong> Html To PDF Conversion - Angular 6</strong>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <table id="convert">
+            <tr>
+              <td>
+                <table>
+                  <tr>
+                    <td>
+                      <table>
+                        <tr>
+                          <td>
+                            <b>Fakturanummer: </b> ORD0000-32612</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <b>Fakturadatum: </b>2018-05-17</td>
+                        </tr>
+                        <tr>
+                          <td>Var god tänk på miljön innan
+                            <br>du skriver ut det här mejlet.</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <br>
+            <br>
+          </table>
+        </div>
+        <div class="card-footer">
+          <input type="button" value="DownloadPdf" class="btn btn-primary btn-outline margin-left-10" (click)="captureScreenToPdf()" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

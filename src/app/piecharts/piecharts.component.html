@@ -1,0 +1,37 @@
+
+<app-dashboard></app-dashboard>
+
+<div class="piechart">
+  <div class="card pie-img">
+    <div class="card-header">
+      <div class="card-title">
+        <h3>DYNAMIC CHARTS EXAMPLE AND DATA RETRIEVE FROM BACKEND</h3>
+      </div>
+    </div>
+    <div class="card-body min-height-500">
+  
+      <highcharts-chart [Highcharts]="Highcharts" [options]="leavesPieChart" style="width: 100%; height: 400px; display: block;"></highcharts-chart>
+    </div>
+   
+  </div>
+</div>
+   
+<div>
+  <h2>Hello{{date}}</h2>
+  <h3>{{date | date: 'ddMMyyyy'}}, should be 
+    {{date | date: 'dd'}}/{{date | date:'MM'}}/{{date | date: 'yyyy'}}</h3>
+
+    <h3>{{date | date: 'ddMMyyyy'}}, should be 
+      {{date | date: 'yyyy'}}/{{date | date:'MM'}}/{{date | date: 'dd'}}
+    </h3>
+  </div>
+
+  <button type="submit" (click)="monthName()">MonthName</button>
+
+
+
+
+  <div class="card-body min-height-500">
+  
+    <highcharts-chart [Highcharts]="Highcharts" [options]="options"></highcharts-chart>
+  </div>

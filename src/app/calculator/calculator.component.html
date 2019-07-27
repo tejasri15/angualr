@@ -1,0 +1,30 @@
+<app-dashboard></app-dashboard>
+<input type="text" class="qrcode" [(ngModel)]="qrcode" name="qrcode" placeholder="qr code">
+<button tye="submit" (click)="qrcodegenerator()">generate QRCode</button>
+<button tye="submit" (click)="barcodegenerator()">generate BARCODE</button>
+<button tye="submit" (click)="scanQRCode()">scan barcode</button>
+<input type="button" value="DownloadImage" (click)="captureScreen()" />
+<div *ngIf="showQr">
+      <ngx-qrcode [qrc-element-type]="elementType" [qrc-value]="value" qrc-class="aclass" qrc-errorCorrectionLevel="L">
+      </ngx-qrcode>
+</div>
+
+<div *ngIf="showBarcode">
+      <ngx-barcode [bc-value]="value" [bc-display-value]="true"></ngx-barcode>
+</div>
+
+
+
+<qr-scanner
+        [debug]="false"
+        [canvasWidth]="1080" 
+        [canvasHeight]="720" 
+        [stopAfterScan]="true" 
+        [updateTime]="500"
+        (click)="scanQRCode()">
+
+</qr-scanner>   
+
+
+
+
