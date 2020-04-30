@@ -29,7 +29,7 @@
     "highcharts-angular": "^2.4.0",
     "html-to-pdf": "^0.1.11",
     "html2canvas": "^1.0.0-rc.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jspdf": "^1.5.3",
     "moment": "^2.24.0",
     "mydatepicker": "^2.6.6",
